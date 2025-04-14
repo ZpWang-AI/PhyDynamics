@@ -6,8 +6,10 @@ nohup.out
 
 *backup*/
 *trash*/
-*log*/
-*tmp*/
+*log/
+log*/
+*tmp/
+tmp*/
 old/
 local/
 # *archive
