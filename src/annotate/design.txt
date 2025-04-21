@@ -1,0 +1,69 @@
+temporal grounding 
+dense video captioning
+vqa
+objective detection
+
+
+# ==============================
+- input
+video
+prompt:
+- -
+Please generate a comprehensive description of the video content. Include:  
+1. subjects
+2. motions
+3. notable objects
+
+Focus on conciseness while maintaining analytical depth. 
+
+# ==============================
+video
+prompt:
+- - 
+## Objective
+Classify the described video using the provided physical dynamics ontology. Output applicable categories with reasoning based on the description. If no category fits, output "Null".
+
+## Ontology Structure
+{ontology}
+
+## Dense video description
+{description}
+
+## Output Format Guidelines
+
+### Classification
+List ALL applicable ontology categories as comma-separated values
+
+If multiple independent categories apply, list them separately
+
+### Reasoning
+Explicitly connect description elements to chosen categories
+
+Use concise, evidence-based explanations
+
+### Null Condition
+Only output Null if no category (including all subcategories) matches
+
+## Output Examples
+
+### Example 1
+Class:  
+Solid, Solid Motion, Solid, External Forces  
+
+Reason:  
+The rotating ball indicates solid motion (rotation). Collision demonstrates external forces (impact). 
+
+### Example 2
+Class:  
+Human, Other Animals, Biological and Biomechanical Motion, Biological Activity
+
+Reason:
+this video is about a person playing with his pet dog.
+
+### Example 3
+Null
+
+
+
+
+
